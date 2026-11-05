@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Windows 7 Desktop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="desktop"></div>
+<div id="windows"></div>
+
+<div id="start" hidden>
+  <div class="start-left">
+    <ul id="start-list"></ul>
+    <div class="start-search"><input id="start-search" type="text" placeholder="Search programs" autocomplete="off"></div>
+  </div>
+  <div class="start-right">
+    <button data-app="computer">Computer</button>
+    <button data-app="explorer">File Explorer</button>
+    <button data-app="calc">Calculator</button>
+    <button data-app="personalize">Personalization</button>
+    <button data-app="control">Control Panel</button>
+    <button data-app="taskmgr">Task Manager</button>
+    <button id="wall-btn">Next wallpaper</button>
+  </div>
+  <div class="start-foot">
+    <button id="shutdown-btn">Shut down</button>
+    <button id="power-arrow">&#9656;</button>
+    <ul id="power-menu" hidden>
+      <li data-power="lock">Lock</li>
+      <li data-power="restart">Restart</li>
+      <li data-power="off">Shut down</li>
+    </ul>
+  </div>
+</div>
+
+<div id="calendar" hidden>
+  <div id="cal-time"></div>
+  <div id="cal-date"></div>
+  <div class="cal-head"><button id="cal-prev">&lsaquo;</button><span id="cal-title"></span><button id="cal-next">&rsaquo;</button></div>
+  <div id="cal-grid"></div>
+</div>
+
+<div id="taskbar">
+  <button id="orb" title="Start">&#10070;</button>
+  <div id="tasks"></div>
+  <div id="tray"><button class="tray-btn" id="flip-btn" title="Flip 3D (Windows+Tab or Alt+`)">3D</button><button class="tray-btn" id="net" title="Network"></button><button class="tray-btn" id="vol" title="Volume"></button><button id="clock"></button></div>
+  <div id="show-desktop" title="Show desktop"></div>
+</div>
+
+<div id="volpanel" hidden>
+  <div class="pt">Speakers</div>
+  <input id="vol-range" type="range" min="0" max="100" aria-label="Volume">
+  <div id="vol-val"></div>
+  <div class="prow"><button id="vol-mute"></button><button id="vol-test">Play test sound</button></div>
+  <div class="phint">This sets the volume of sounds made by this desktop. It does not change your computer's real volume.</div>
+</div>
+<div id="netpanel" hidden>
+  <div class="pt" id="net-title"></div>
+  <ul id="net-info"></ul>
+  <div class="prow"><button id="net-test">Test internet access</button></div>
+  <div id="net-result"></div>
+  <div class="phint">A web page cannot see or change your real Wi-Fi or network settings. The test contacts a Google test address and measures the delay.</div>
+</div>
+<div id="flip" hidden>
+  <div id="f3-label"></div>
+  <div id="f3-stage"></div>
+  <div id="f3-hint">Tab or arrow keys switch windows. Release the key, press Enter, or click a window to choose it. Esc cancels.</div>
+</div>
+<div id="toast" hidden></div>
+
+<ul id="ctx" hidden></ul>
+<div id="screen" hidden></div>
+<script src="script.js"></script>
+</body>
+</html>
